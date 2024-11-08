@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Biografía</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Página de Biografía</h1>
+        </header>
+        
+        <section class="biography-form">
+            <h2>Escribe tu Biografía</h2>
+            <form>
+                <textarea id="biography" rows="10" placeholder="Escribe tu biografía aquí..."></textarea>
+                <button type="button" onclick="submitBiography()">Guardar Biografía</button>
+            </form>
+        </section>
+
+        <section class="biography-display">
+            <h2>Mi Biografía</h2>
+            <p id="displayBiography">Tu biografía aparecerá aquí después de guardarla.</p>
+        </section>
+    </div>
+
+    <script>
+        function submitBiography() {
+            const biographyText = document.getElementById("biography").value;
+            document.getElementById("displayBiography").innerText = biographyText;
+        }
+    </script>
+</body>
+</html>
